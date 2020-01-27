@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'todo-angular';
+  todos = [];
+
+  addTodo(title) {
+    this.todos.push({ title });
+  }
+
+  toggleTodo(title) {
+    const index = this.todos.findIndex((todo) => todo.title === title);
+    this.todos[index].completed = !this.todos[index].completed;
+  }
+
+  deleteTodo(title) {
+    this.todos = this.todos.filter((todo) => todo.title !== title);
+  }
 }

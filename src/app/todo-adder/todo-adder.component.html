@@ -1,0 +1,6 @@
+<form class="input-group mb-3" (submit)="onAdd($event)">
+  <input [(ngModel)]="todo" [ngModelOptions]="{standalone: true}" class="form-control" placeholder="New todo">
+  <div class="input-group-append">
+    <button class="btn btn-primary" type="submit">Add</button>
+  </div>
+</form>

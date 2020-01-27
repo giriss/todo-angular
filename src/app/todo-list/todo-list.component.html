@@ -1,0 +1,10 @@
+<ul class="list-group">
+  <li
+    app-todo
+    *ngFor="let item of items"
+    [title]="item.title"
+    [completed]="item.completed"
+    (toggle)="emitToggle(item.title)"
+    (delete)="emitDelete(item.title)"
+  ></li>
+</ul>
