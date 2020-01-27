@@ -1,7 +1,7 @@
 import { Component, OnInit, HostListener, Output, EventEmitter, Input, HostBinding } from '@angular/core';
 
 @Component({
-  selector: 'li[app-todo]',
+  selector: '[app-todo]',
   templateUrl: './todo.component.html',
   styleUrls: ['./todo.component.css'],
 })
